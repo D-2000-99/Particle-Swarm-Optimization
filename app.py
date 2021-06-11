@@ -6,7 +6,6 @@ from json_tricks import dump, dumps, load, loads, strip_comments
 
 from joblib import load
 import pso_input_flask as pso
-import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 

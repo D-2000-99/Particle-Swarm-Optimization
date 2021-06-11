@@ -1,7 +1,6 @@
 # Particle Swarm Optimization
 
-https://particle-swarm.herokuapp.com/
-
+https://particle-swarm-eu.herokuapp.com/
 
 Particle Swarm Optimization is an optimization technique where a set of candidate solutions (particles) are moved around a search landscape in order to find the optimum solution. The movement is done with a simple mathematical formula that adjusts each particle’s velocity and position.
 

@@ -3,7 +3,9 @@
 https://particle-swarm-eu.herokuapp.com/
 
 <hr>
-### Please note: 
+
+### Please note:
+
 The app is hosted on a free Heroku tier, which idles dynos. Also being hosted in the EU region, you are likely to encounter delays in the output. Please wait 35-45 seconds before refreshing the page. 
 <hr>
 

@@ -1,4 +1,4 @@
-# Particle Swarm Optimization
+# ✨Particle Swarm Optimization
 
 https://particle-swarm-eu.herokuapp.com/
 

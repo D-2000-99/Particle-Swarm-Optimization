@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PSO</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+	<script src="{{ url_for('static', filename='plotly-latest.min.js') }}"></script>
+</head>
+<body>
+	<div class='page'>
+
+	<div id='head'>
+		<div id='title_back'>
+			<p id='title'>Particle Swarm Optimization</p>
+		</div>
+		<div class='pop_out'>
+			<p>
+			The project presented here is a simple and visual example of the working of the Particle Swarm Optimization model. In this project, we try to find the <b>global minimum</b> of a given objective function.
+		</p>
+		</div>
+	</div>
+
+	<div id='main'>
+		<div id='main-left' class='pop_out'>
+			<p> 
+				Here are a few examples you can use to understand the working of the project before you try it out on your own.
+			</p>
+			<div class='examples_container'>
+				
+				<p><b>Example 1</b></p>
+				<div class='pop_out ex_box'>
+					<p>Input Minimization Objective: x1*10+np.square(x2)</p>
+					<p>Number of Constraints: 1</p>
+					<p>x1>x2</p>
+					<p>Enter 1st Upper Bound value: 20</p>
+					<p>Enter 2nd Upper Bound value: 20</p>
+					<p>Enter 1st Lower Bound value: -20</p>
+					<p>Enter 2nd Lower Bound value: -20</p>
+					<p>Specify number of particles: 10</p>
+					<p>Specify number of Iterations: 30</p>
+				</div>
+
+				
+				<p><b>Example 2</b></p>
+				<div class='pop_out ex_box'>
+					<p>Input Minimization Objective: np.cos(x1)*np.sin(x2)</p>
+					<p>Number of Constraints: 0</p>
+					<p>Enter 1st Upper Bound value: 10</p>
+					<p>Enter 2nd Upper Bound value: 20</p>
+					<p>Enter 1st Lower Bound value: -10</p>
+					<p>Enter 2nd Lower Bound value: -20</p>
+					<p>Specify number of particles: 20</p>
+					<p>Specify number of Iterations: 30</p>
+				</div>
+
+				<p><b>NOTE:</b> To use a function, click on the value on which you want to use the function and click on the relevant function button. Use of paranthesis '()' will aid in building more complex functions. For example; Functions like np.power((x1*x2),3) can be built using this method. </p>
+			</div>
+		</div>
+		<div id='main-right' class='pop_out'>
+			<div id='container'>
+				<div>
+					<label for="result_tb">Minimization Objective</label>
+					<input id='result_tb' class='res' type="text" name="val" disabled>
+				</div>
+				<div id='num_const_div' >
+					<label for="num_const_tb">Number of Constraints</label>
+					<select id= 'num_const_select'>
+						<option value="0">0</option>
+					    <option value="1">1</option>
+					    <option value="2">2</option>
+					    <option value="3">3</option>
+					</select>
+				</div>
+				
+				<div id='constraints_div'>
+					<!-- INSERT TB FOR CONSTRAINTS -->
+				</div>
+
+				<div id='ublb'>
+					<label for="ub1_tb">First Upper bound</label>
+						<input id='ub1_tb' class='res' type="text" name="val" disabled>
+					<label for="ub2_tb">Second Upper bound</label>
+						<input id='ub2_tb' class='res' type="text" name="val" disabled>
+					<label for="lb1_tb">First Lower bound</label>
+						<input id='lb1_tb' class='res' type="text" name="val" disabled>
+					<label for="lb2_tb">Second Lower bound</label>
+						<input id='lb2_tb' class='res' type="text" name="val" disabled>
+				</div>
+
+				<div id='nOP_div'>
+					<label for="nOP">Number of Particles</label>
+					<input id='nOP' class='res' type="text" name="val" disabled>
+				</div>
+				
+				<div id='iter_div'>
+					<label for="Iter">Number of Iterations</label>
+					<input id='Iter' class='res' type="text" name="val" disabled>
+				</div>
+			</div>
+			<div id='button_container'>
+				<div id=left_r_main>
+					<div>
+						<button id='x_btn'>x1</button>
+						<button id='y_btn'>x2</button>
+					</div>
+
+					<div>
+						<button id='gt'>></button>
+						<button id='lt'><</button>
+						<button id='gteq'>>=</button>
+						<button id='lteq'><=</button>
+						<button id='eq'>=</button>
+						<button id='nteq'>!=</button>
+						<button id='or_button'>or</button>
+						<button id='and_button'>and</button>
+					</div>
+				</div>
+				<div id='right_r_main'>
+					<div id='right_top'>
+						<button id='plus'>+</button>
+						<button id='minus'>-</button>
+						<button id='mul'>*</button>
+						<button id='div'>/</button>
+					</div>
+					
+
+					<div id='right_bottom'>
+						<button id='sq'>^2</button>
+						<button id='pow'>^</button>
+						<button id='sum_button'>sum</button>
+						<button id='cos_button'>cos</button>
+						<button id='sin_button'>sin</button>
+						<button id='tan_button'>tan</button>
+						<button id='p_left'>(</button>
+						<button id='p_right'>)</button>
+					</div>
+				</div>
+
+				<div id='center_r_main'>
+					<div id='nums_1-3'></div>
+					<div id='nums_4-6'></div>
+					<div id='nums_7-9'></div>
+					<div id='nums0'></div>
+
+					<div>
+						<button id='submit'>Next </button> <!-- MIN_OBJ -->
+						<button id='submit_const'>Next</button> <!-- Constraints -->
+						<button id='submit_lbub'>Next</button> <!-- LB,UB -->
+						<button id='submit_nop'>Next</button> <!-- nOP -->
+						<button id='submit_iter'>Submit</button> <!-- Iterations -->
+					</div>
+
+					<div>
+						<button id='clear'>Clear</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id='vis'>
+		<div id='anims'>
+			<div id='convergence_container' class='pop_out'><div id='convergence_plot'></div></div>
+			<div id='scatter_anim_container' class='pop_out'><div id='scatter_plot_anim'></div></div>
+		</div>
+		<div id= surface_container>
+			<div id='surface_plot_container' class='pop_out'><div id='surface_plot'></div></div>
+			<div id= 'surface_content' class='pop_out'>
+				<h3>Understanding the plots:</h3>
+				<p>The <span style="text-shadow: 2px 2px 2px #73AFE3;">'Particles Plot'</span> shows the particles moving around a contour plot of the solution landscape as they try to find the global optimum. This involves an <i>exploration phase</i> where the particles explore the landscapes to find a minima, once a minima is found the particles exploit the minima to find the deepest possible point in the valley. The global-best solution is updated as particles find increasingly deeper valleys. The particles then converge to the <i>deepest</i> valley found and exploit the said valley till the global minimum is found.
+				</p>
+				<p>
+				The <span style="text-shadow: 2px 2px 2px #73AFE3;">'Convergence Graph'</span> shows the value of the solution as lower and lower points are found until the global minimum is reached, at which point the graph level's at the minimum.
+				</p>
+				<p>
+				The <span style="text-shadow: 2px 2px 2px #73AFE3;">'Landscape'</span> plot shows the search landscape formed by the minimization objective and constraints provided. This gives a better insight into the search landscape. <i>You can explore the 3D-Surface by dragging, zooming in/out, etc.</i> 
+				</p>
+				<p>
+				<b>Note:</b> The animations are slowed down so that the convergence can be observed. In most cases, the convergence is almost instantaneous given enough particles.
+				</p>
+				
+				</p>
+			</div>
+		</div>
+		<h2 id='header_scatter'>Initial and Final Positions</h2>
+		<div id='scatters'>
+			<div id='scatter_container1' class='pop_out'><div id='scatter_plot_init'></div></div>
+			<div id='scatter_container2' class='pop_out'><div id='scatter_plot_end'></div></div>
+		</div>
+		<div id='para_scatter' class='pop_out'>
+			<p>The <span style="text-shadow: 2px 2px 2px #73AFE3;">'Particles - Initial'</span> shows the initial random positions of the particles on the surface, and the <span style="text-shadow: 2px 2px 2px #73AFE3;">'Particles - End'</span>shows the final positions of the particles at the end of the iterations.</p>
+		</div>
+	</div>
+
+	<div id= 'output'>
+		<div id='out_para'class='pop_out'>
+			<p>The <span style="text-shadow: 2px 2px 2px #73AFE3;">x1</span> and <span style="text-shadow: 2px 2px 2px #73AFE3;">x2</span> values represent the <i>approximate</i> coordinates of the global minimum found, hence they represent the best-known values for the variables x1 and x2 to <i>minimize</i> the solution.</p>
+			<p>The <span style="text-shadow: 2px 2px 2px #73AFE3;">minimum z</span> value is the <i>approximate</i> value of the <i>best solution</i> found by the model for the given minimum objective at location x1,x2.</p>
+
+		</div>
+		<div id='min_xy' class='pop_out'>
+			<i>The <span style="text-shadow: 1px 1px 1px #ff0000;">x1</span> and <span style="text-shadow: 1px 1px 1px #ff0000;">x2</span> values are:</i>  
+			<b><p id='min_xy_op'></p></b>
+		</div>
+		<div id='min_z' class='pop_out' >
+			<i>The <span style="text-shadow: 1px 1px 1px #ff0000;">minimum z</span> value is:</i> 
+			<b><p id='min_z_op'></p></b>
+		</div>
+	</div>
+	
+</div>
+	<script src="{{ url_for('static', filename='style.js') }}"></script>
+	<script src="{{ url_for('static', filename='init_state.js') }}"></script>
+	<script src="{{ url_for('static', filename='string_parse.js') }}"></script>
+	<script src="{{ url_for('static', filename='function_transit.js') }}"></script>
+	<script src="{{ url_for('static', filename='button_operations.js') }}"></script>
+	<script src="{{ url_for('static', filename='visualize.js') }}"></script>
+	<script src="{{ url_for('static', filename='fetch.js') }}"></script>
+</body>
+
+	<div id='foot'>
+		<p>Deepak Haridas</p>
+	</div>
+</html>

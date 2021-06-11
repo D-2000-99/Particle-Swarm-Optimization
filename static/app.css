@@ -1,0 +1,376 @@
+body
+{
+	background-color: #F7F7F7;
+	font-family: 'Lato', sans-serif;
+	/*font-family: 'Martel Sans', sans-serif;*/
+	font-weight: 300;
+	font-size: 20px;
+}
+
+#constraints_div
+{
+}
+
+button
+{
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-color: white;
+	margin: 2px;
+}
+
+#nums0 button
+{
+	width: 110px;
+}
+
+#num_const_select
+{
+	font-size: 20px;
+}
+
+#submit,#submit_const,#submit_lbub,#submit_nop,#submit_iter
+{
+	width: 170px;
+}
+
+#clear
+{
+	width: 170px;
+}
+
+label {
+float: left;
+width: 10em;
+margin-right: 1em;
+}
+
+.pop_out
+{
+	  padding: 60px 35px 35px 35px;
+	  border-radius: 40px;
+	  background: #ecf0f3;
+	  box-shadow: 13px 13px 20px #cbced1,
+	              -13px -13px 20px #ffffff;
+}
+
+.page
+{
+	display: grid;
+	grid-template-rows: 0.4fr 3fr;
+}
+
+#title_back
+{
+	background-size: cover;*/
+	border-left: 5px solid black;
+	border-right: 5px solid black;
+	text-shadow: 2px 2px #73AFE3;
+}
+
+#head
+{
+	margin: 20px;
+}
+
+#title
+{
+	font-weight: 400;
+	text-align: center;
+	margin: 0px
+	grid-row: 1;
+	font-size: 2em;
+}
+
+#main
+{	grid-row: 2;
+	display: grid;
+}
+
+#main-left
+{	grid-row: 1;
+	border-radius: 15px;
+	margin: 40px;
+}
+
+.examples_container
+{	
+	font-size: 18px;
+}
+
+.ex_box
+{
+	line-height: 80%;
+	padding: 5px 5px 5px 30px;
+	background-color: #ECF0F3;
+}
+
+#main-right
+{
+	grid-column: 2;
+	background-color: #ECF0F3;
+	border-radius: 15px;
+	margin: 40px;
+	padding:60px;
+	display: grid;
+}
+
+#main-right input
+{
+	height: 25px;
+	font-size: 20px;
+}
+
+#container
+{
+	padding: 10px;
+}
+
+#button_container
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+
+
+#left_r_main
+{
+	grid-column: 1;
+	grid-row: 1;
+}
+
+#center_r_main
+{
+	grid-column: 2;
+	grid-row: 1;
+}
+
+#right_r_main
+{
+	grid-column: 3;
+	grid-row: 1;
+	flex-wrap: nowrap;
+}
+
+.res
+{
+	width: 100%;
+	margin: 10px 0px 10px 0px;
+}
+
+/*VISUALIZATION*/
+#vis
+{
+	display: grid;
+}
+
+/*anims*/
+#anims
+{
+	grid-row: 1;
+	display: grid;
+}
+
+#convergence_container
+{
+	margin: 30px;
+	grid-column: 1;
+	display: flex;
+    justify-content: center;
+}
+
+#scatter_anim_container
+{
+	margin: 30px;
+	grid-column: 2;
+	display: flex;
+    justify-content: center;
+}
+/*SURFACE*/
+
+ #surface_container
+ {
+ 	grid-row: 2;
+ 	display: grid;
+ }
+
+ #surface_plot_container
+{
+	margin: 30px;
+	grid-column: 1;
+	display: flex;
+    justify-content: center;
+}
+
+#surface_content
+{
+	margin: 30px;
+	grid-column: 2;
+    justify-content: center;
+}
+
+#header_scatter
+{
+	margin-left: 30px;
+	grid-row: 3;
+}
+
+/*SCATTER*/
+ #scatters
+ {
+ 	grid-row: 4;
+ 	display: grid;
+ }
+
+#scatter_container1
+{
+	margin: 30px;
+	grid-column: 1;
+	display: flex;
+    justify-content: center;
+}
+
+#scatter_container2
+{
+	margin: 30px;
+	grid-column: 2;
+	display: flex;
+    justify-content: center;
+}
+
+#para_scatter
+{
+	grid-row: 5;
+	margin: 30px;
+}
+
+#output
+{
+	display: grid;
+}
+
+#out_para
+{
+	margin: 30px;
+	grid-column: 1;
+}
+
+#min_xy
+{
+	margin: 30px;
+	grid-column: 2;
+	/*background-color: #FFEA9A;*/
+	background-color: #FFFFCC;
+}
+
+#min_z
+{
+	margin: 30px;
+	grid-column: 3;
+	/*background-color: #FFEA9A;*/
+	background-color: #FFFFCC;
+}
+
+#foot
+{
+}
+
+@media only screen and (max-width: 1900px)
+{
+	#main
+	{
+		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 1100px)
+{
+	#main
+	{
+		width: 100%;
+	}
+
+	#main-left{
+		grid-column-start: 1;
+		grid-column-end: 1;
+	}
+
+	.examples_container
+	{	
+		font-size: 14px;
+	}
+	#main-right{
+		grid-column-start: 1;
+		grid-column-end: 1;
+		grid-row: 2;
+		padding: 0px;
+	}
+
+	#container
+	{
+		padding: 100px;
+		padding-bottom: 5px;
+	}
+
+	button{
+		width: 35px;
+	}
+
+	#right_r_main button
+	{
+		width: 40px;
+		padding: 0;
+	}
+
+	#submit
+	{
+		width: 120px
+	}
+	#clear
+	{
+		width: 120px;
+	}
+
+	#main-left{
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	#convergence_container{
+		grid-column: 1;
+	}
+
+	#scatter_anim_container{		
+		grid-column: 1;
+	}
+
+	 #surface_plot_container{
+		grid-column: 1;
+	}
+	#surface_content{
+		grid-column: 1;
+	}
+
+	#scatter_container1{
+		grid-column: 1;
+	}
+
+	#scatter_container2{
+		grid-column: 1;
+	}
+	#out_para{
+		grid-column: 1;
+	}
+	#min_xy{
+		grid-column: 1;
+	}
+	#min_z{
+		grid-column: 1;
+	}
+}

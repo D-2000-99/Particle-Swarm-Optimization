@@ -140,6 +140,7 @@ sub_iter.addEventListener('click', (e)=>{
 	max_iter = clean_exp(str1)
 	str1 = "";
 	send_data = {arr: [num_const_sel.options.selectedIndex, constraints_arr ,min_obj, bound_arr, Number(nop), Number(max_iter)]}
-	console.log(send_data["arr"]);
+	//console.log(send_data["arr"]);
+	load.style.display = 'block';
 	send(send_data);
 });

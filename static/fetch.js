@@ -22,6 +22,7 @@ fetch("/predict", {
      	X_curve=data_parsed.Plot_vals.X_curve;
         CGCurve = data_parsed.Plot_vals.CGCurve
 
+      load.style.display = 'none';
     	plt_surface(O, X_draw, Y_draw)
         plt_scatter(X_curve, O, X_draw, Y_draw)
         plt_scatter_end(X_curve, O, X_draw, Y_draw)

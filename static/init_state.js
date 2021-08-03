@@ -63,6 +63,9 @@ const sub_lbub = document.querySelector('#submit_lbub');
 const sub_nop = document.querySelector('#submit_nop');
 const sub_iter = document.querySelector('#submit_iter');
 
+//Loader//
+const load = document.querySelector(".loader");
+load.style.display = 'none';
 ///////////////////////////////////////////////////////////////////////////////
 let vis = document.querySelector('#vis');
 vis.style.display = 'none';
@@ -132,7 +135,6 @@ function invalid_ip(c_exp)
 {
 	if (parseInt(c_exp)>50)
 	{
-		console.log(parseInt(c_exp), "greater")
 		sub_lbub.disabled = true;
 	}
 
@@ -143,7 +145,6 @@ function invalid_ip(c_exp)
 
 	else
 	{
-		console.log(parseInt(c_exp), "smaller")
 		sub_lbub.disabled = false;
 		sub_nop.disabled = false;
 		sub_iter.disabled = false;

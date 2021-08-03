@@ -50,8 +50,6 @@ function plt_scatter(xCurve, o, x_new, y_new)
 		data_x.push(xCurve[k][0]['__ndarray__'][0][0]);
 		data_y.push(xCurve[k][0]['__ndarray__'][0][1]);
 	}
-	console.log(data_x)
-	console.log(data_y)
 	let trace = {
 		  x: data_x,
 		  y: data_y,
@@ -143,8 +141,6 @@ function plt_cg_anim(cgCurve)
 	let interval = setInterval(()=>{
 		if (cg_count < max_iter){
 			curr_y = getData(cgCurve)
-			console.log(cg_count);
-			console.log(curr_y);
 			Plotly.extendTraces('convergence_plot',{y:[[curr_y]]}, [0])
 			}
 		else

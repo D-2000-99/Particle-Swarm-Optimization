@@ -4,9 +4,9 @@ https://particle-swarm-eu.herokuapp.com/
 
 <hr>
 
-### Please note:
+### 🛑 PLEASE NOTE:
 
-The app is hosted on a free Heroku tier and you are likely to encounter delays in the output. Please wait 35-45 seconds before refreshing the page. 
+The app is hosted on a free Heroku tier and you are likely to encounter delays in the output. Please wait around a minute before refreshing the page. This purely the result of Heroku limiting bandwidth for apps hosted on the free tier and the app runs instantaneously on a local machine or on paid instances like Elastic Beanstalk.
 <hr>
 
 ### Working:

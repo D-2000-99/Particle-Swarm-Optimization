@@ -1,6 +1,8 @@
 # ✨Particle Swarm Optimization
 
-https://particle-swarm-eu.herokuapp.com/
+http://psolin2-aws.ap-south-1.elasticbeanstalk.com/ - AWS Elastic Beanstalk
+
+https://particle-swarm-eu.herokuapp.com/ - Heroku(Slow)
 
 <hr>
 

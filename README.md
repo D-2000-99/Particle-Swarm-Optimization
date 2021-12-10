@@ -2,7 +2,7 @@
 
 http://psolin2-aws.ap-south-1.elasticbeanstalk.com/ - AWS Elastic Beanstalk (Fast)
 
-https://particle-swarm-eu.herokuapp.com/ - Heroku(Slow)
+https://particle-swarm-eu.herokuapp.com/ - Heroku (Slow)
 
 <hr>
 

@@ -1,13 +1,11 @@
 # ✨Particle Swarm Optimization
 
-[https://particle-swarm-eu.herokuapp.com/](https://web-production-d09f0.up.railway.app/) - Railway
-
+[Hosted Web-app](https://web-production-d09f0.up.railway.app/) - Railway
+(Scroll down to see the input buttons)
 <hr>
 
 ### 🛑 PLEASE NOTE:
 
-The app is hosted on a free Heroku tier and you are likely to encounter delays in the output. Please wait around a minute before refreshing the page. This is purely the result of Heroku limiting bandwidth for apps hosted on the free tier and the app runs instantaneously on a local machine or on paid instances like AWS Elastic Beanstalk.
-<hr>
 
 ### Working:
 

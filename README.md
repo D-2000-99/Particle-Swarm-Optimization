@@ -1,6 +1,6 @@
 # ✨Particle Swarm Optimization
 
-https://particle-swarm-eu.herokuapp.com/ - Heroku EU Server (Slow)
+[https://particle-swarm-eu.herokuapp.com/](https://web-production-d09f0.up.railway.app/) - Railway
 
 <hr>
 
